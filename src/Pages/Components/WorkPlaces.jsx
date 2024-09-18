@@ -7,7 +7,7 @@ function WorkPlaces() {
         setActive(()=>works[0])
     }, [])
   return (
-    <div id='experience' className='workPlaces w-full flex flex-col items-center md:items-start justify-center my-20 lg:my-32 px-5 xs:px-10 sm:px-20 lg:px-32 xl:px-56'>
+    <div id='experience' className='workPlaces w-full flex flex-col items-center md:items-start justify-center my-20 lg:my-32 px-2 xs:px-10 sm:px-20 lg:px-32 xl:px-56'>
         <div className='text-theme text-xl xs:text-3xl font-extrabold py-1 md:hidden'>Where I've Worked</div>
         <div className="md:hidden flex items-center justify-center mt-1 w-[200px] ">
             <div className="border-b w-full border-gray-500"></div>
@@ -20,15 +20,17 @@ function WorkPlaces() {
         </div>
         
         <section className="flex items-start md:flex-row flex-col max-w-full mt-6 md:mt-10">
-            <div className="w-full md:hidden flex flex-wrap items-center justify-center mb-5">
-                {
-                    works.map((work)=>{
-                        return <button key={work.id} onClick={()=>setActive(()=>work)} className={`w-fit group cursor-pointer m-2 h-[35px] text-[0.75rem] rounded-3xl hover:border bg-[rgba(255,255,255,0.05)] flex px-4 border-solid border-theme`} style={{borderWidth: `${active.id === work.id ? '1px' : '0'}`}}>
-                            <small className={`${work.id === active.id ? 'text-theme': 'text-white'} group-hover:text-theme  pointer-events-none`}>{work.company}</small>
-                        </button>
-                    })
-                }
-            </div>
+            <aside className="w-full md:hidden overflow-x-auto border-b border-gray-500 mb-5">
+                <div className="w-full flex items-center">
+                    {
+                        works.map((work,idx)=>{
+                            return <button key={work.id} onClick={()=>setActive(()=>work)} className={`w-fit group cursor-pointer ml-0 m-2 h-[35px] text-[0.75rem] rounded-3xl hover:border bg-[rgba(255,255,255,0.05)] flex px-4 border-solid border-theme`} style={{borderWidth: `${active.id === work.id ? '1px' : '0'}`}}>
+                                <small className={`${work.id === active.id ? 'text-theme': 'text-white'} text-nowrap group-hover:text-theme  pointer-events-none`}>{idx+1}. {work.company}</small>
+                            </button>
+                        })
+                    }
+                </div>
+            </aside>
             <div className="md:flex hidden flex-col text-left items-start border-l-2 border-gray-500 border-solid min-w-[200px] md:min-w-[250px]">
                 {
                     works.map((work, idx)=>{

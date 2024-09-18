@@ -4,7 +4,7 @@ import cv from '../Assets/cv.pdf'
 
 function Header() {
   return (
-    <div className='w-full flex justify-between min-h-[90px] items-center px-10'>
+    <div className='w-full flex justify-between min-h-[90px] items-center px-2 xs:px-10 sm:px-20 lg:px-32 xl:px-56'>
         <h1 className='animatefromleft'><b className='text-theme'>Josh</b> | Portfolio</h1>
 
         <div className="flex items-center animatefromright sm:w-[400px] justify-between">

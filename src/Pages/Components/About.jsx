@@ -4,7 +4,7 @@ import josh from '../../Assets/images/Josh.jpeg'
 function About() {
     const skills = ['Javascript', 'Typescript', 'React Js', 'Next Js', 'Vue Js', 'Node Js', 'Python', 'Django', ]
   return (
-    <div id='about' className='aboutSec w-full flex items-start my-20 lg:my-32 px-5 xs:px-10 sm:px-20 lg:px-32 xl:px-56'>
+    <div id='about' className='aboutSec w-full flex items-start my-20 lg:my-32 px-2 xs:px-10 sm:px-20 lg:px-32 xl:px-56'>
         <section className="flex flex-col items-center md:items-start w-full md:max-w-[500px]">
             <div className='text-theme text-xl sm:text-3xl font-extrabold py-1 md:hidden'>About Me</div>
             <div className="md:hidden flex items-center justify-center mt-1 w-[200px] mb-3 ">

@@ -3,7 +3,7 @@ import {projects} from './projects'
 
 function Projects() {
   return (
-    <div id='work' className='projectWorks w-full flex flex-col items-center md:items-start justify-center my-20 lg:my-32 px-5 xs:px-10 sm:px-20 lg:px-32 xl:px-56'>
+    <div id='work' className='projectWorks w-full flex flex-col items-center md:items-start justify-center my-20 lg:my-32 px-2 xs:px-10 sm:px-20 lg:px-32 xl:px-56'>
         <div className='text-theme text-lg md:text-xl xs:text-3xl font-extrabold py-1 md:hidden'>Some things I've Built</div>
         <div className="md:hidden flex items-center justify-center mt-1 w-[200px] ">
             <div className="border-b w-full border-gray-500"></div>
@@ -18,7 +18,7 @@ function Projects() {
         <div className="flex flex-col items-start w-full mt-6">
             {
                 projects.map((project, idx)=>{
-                    return <div key={idx} className={`projectItem group flex w-full mx-auto md:flex-row flex-col items-center justify-between ${idx%2 !== 0 && 'md:flex-row-reverse'} mb-[5rem] 2xl:mb-[10rem] `}>
+                    return <div key={idx} className={`projectItem group flex w-full mx-auto md:flex-row flex-col items-center justify-between ${idx%2 !== 0 && 'md:flex-row-reverse'} mb-[4rem] 2xl:mb-[10rem] `}>
                         <div className={`
                             relative
                             md:min-w-[400px] 
@@ -47,12 +47,9 @@ function Projects() {
                             <div className="flex">
                                 {
                                     project.skills.map((skill,idxx)=>{
-                                        return <small key={idxx} className='mx-3 text-white'>{skill}</small>
+                                        return <small key={idxx} className='mx-3 text-white px-4 h-10 flex items-center justify-center rounded-full bg-gray-800 m-1'>{skill}</small>
                                     })
                                 }
-                            </div>
-                            <div>
-                                <small className="fa fa-arrow-up-right-from-square"></small>
                             </div>
                         </div>
                     </div>
