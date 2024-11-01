@@ -15,13 +15,14 @@ function Intro() {
         <b className='myname text-3xl xs:text-5xl lg:text-8xl font-extrabold mt-3 mb-1 sm:my-3'>Joshua Odame</b>
         <b className='subDes xs:text-xl sm:text-3xl lg:text-6xl font-semibold mb-4 sm:mb-10'>I build stuff that works at scale</b>
 
-        <p className='text-[0.8rem] lg:text-[1rem]'>
-            A software engineer based in Accra, Ghana with specialty in <br />
-            design and development of scalable web applications.
+        <p className='text-[0.8rem] lg:text-[1rem] lg:w-[500px]'>
+          A software engineer based in Accra, Ghana, specializing in
+          the design and development of scalable web applications.
         </p>
         <br />
-        <p className='text-[0.8rem] lg:text-[1rem]'>
-            Recently shipped an amazing application at Hodlpay, Ghana <br/>a Software Engineer, ask me about it!
+        <p className='text-[0.8rem] lg:text-[1rem] lg:w-[500px]'>
+          Recently shipped an exciting application at Hodlpay,
+          as a software engineer—ask me about it!
         </p>
         <br />
 

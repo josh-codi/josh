@@ -8,7 +8,7 @@ import Projects from './Components/Projects.jsx'
 
 function Main() {
     const Content =()=>{
-        return <div className='w-full'>
+        return <div className='w-full relative'>
             <Intro/>
             <About/>
             <WorkPlaces/>
