@@ -32,8 +32,8 @@ function Projects() {
                             border-2 border-theme
                             md:mb-0 mb-4
                             ${idx%2 === 0 ? 'md:mr-10 animatefromleft':'md:ml-10 animatefromright'}`}>
-                            <img src={project.img} alt="" className='object-cover w-full h-full'/>
-                            <div className="absolute left-0 top-0 bg-[#0000007d] w-full h-full group-hover:bg-transparent"></div>
+                            <img src={project.img} alt="" className='lg:object-contain object-cover w-full h-full rounded-lg'/>
+                            <div className="absolute left-0 top-0 bg-[#00000000] w-full h-full group-hover:bg-transparent"></div>
                         </div>
 
                         <div className={`projectDes w-full flex flex-col ${idx%2 === 0 ? 'md:items-end  animatefromright md:text-right':'md:items-start  animatefromleft md:text-left'}`}>
@@ -41,13 +41,14 @@ function Projects() {
                                 <small className="text-theme">Feature Project</small>
                                 <h1 className='text-xl md:text-3xl font-semibold'>{project.title}</h1>
                             </div>
-                            <div className='md:bg-[#0055ff33] md:my-2 md:p-5 w-full'>
+                            <div className='md:bg-[#0055ff33] md:my-2 md:p-5 w-full mb-2'>
                                 <p className='md:text-[0.9rem] text-[0.75rem] md:text-white text-gray-500'>{project.description}</p>
+                                <a href={project.link} target='_blank' rel="noreferrer" className='md:text-[0.9rem] text-[0.75rem] text-green-500'><i className="fa fa-link"></i>{project.link}</a>
                             </div>
-                            <div className="flex">
+                            <div className="flex flex-wrap">
                                 {
                                     project.skills.map((skill,idxx)=>{
-                                        return <small key={idxx} className='mx-3 text-white px-4 h-10 flex items-center justify-center rounded-full bg-gray-800 m-1'>{skill}</small>
+                                        return <small key={idxx} className='mr-3 text-white px-4 h-10 flex items-center justify-center rounded-full bg-gray-800 m-1'>{skill}</small>
                                     })
                                 }
                             </div>

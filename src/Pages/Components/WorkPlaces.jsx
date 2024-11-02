@@ -21,7 +21,7 @@ function WorkPlaces() {
         
         <section className="flex items-start md:flex-row flex-col max-w-full mt-6 md:mt-10">
             <aside className="w-full md:hidden overflow-x-auto border-b border-gray-500 mb-5">
-                <div className="w-full flex items-center">
+                <div className="w-full flex items-center justify-center flex-wrap">
                     {
                         works.map((work,idx)=>{
                             return <button key={work.id} onClick={()=>setActive(()=>work)} className={`w-fit group cursor-pointer ml-0 m-2 h-[35px] text-[0.75rem] rounded-3xl hover:border bg-[rgba(255,255,255,0.05)] flex px-4 border-solid border-theme`} style={{borderWidth: `${active.id === work.id ? '1px' : '0'}`}}>
@@ -42,13 +42,18 @@ function WorkPlaces() {
             </div>
 
             <div className="flex flex-col md:items-start text-center md:text-left pl-3 md:pl-10 overflow-hidden md:p-0 p-4 md:bg-transparent bg-gray-800">
-                <h1 className={`sm:text-lg md:text-2xl font-semibold ${active.id%2 !== 0 ? 'animatefromleft':'animatefromright'}`}>{active.title} <b className='text-themeFade'>@ {active.company}</b></h1>
+                <h1 className={`sm:text-lg md:text-2xl font-semibold ${active.id%2 !== 0 ? 'animatefromleft':'animatefromright'}`}>
+                    {active.title} 
+                    <a href={active.link} className='ml-1'>
+                        <b className='text-themeFade hover:text-theme'>@ {active.company}</b>
+                    </a>
+                </h1>
                 <small className={`md:mt-3 mb-4 md:mb-8 ${active.id%2 !== 0 ? 'animatefromleft':'animatefromright'}`}>{active.duration}</small>
 
                 {
                     active.tasks.map((task, idx)=>{
-                        return <div key={idx} className={`flex text-center md:text-left mb-3 ${active.id%2 !== 0 ? 'animatefromleft':'animatefromright'}`}>
-                            {/* <i className="fa fa-caret-right text-themeFade mr-3"></i> */}
+                        return <div key={idx} className={`flex text-left md:text-left mb-3 ${active.id%2 !== 0 ? 'animatefromleft':'animatefromright'}`}>
+                            <i className=" fa fa-caret-right text-themeFade mr-3"></i>
                             <p className='text-gray-500 xl:text-[0.9rem] sm:text-[0.8rem] text-[0.7rem]'>{task}</p>
                         </div>
                     })
