@@ -1,4 +1,13 @@
+import diaload from '../../Assets/images/diaload.png'
+
 export const projects = [
+    {
+        title: 'Diaload',
+        link: 'https://diaload.com',
+        img: diaload,
+        skills: ['React', 'Redux', 'Javascript'],
+        description:`Distribute your app with anyone for testing and feedback. Diaload is born out of real-world challenges, backed by domain expertise, and aims to fulfil a need for improved app distribution, testing and collaboration.`
+    },
     {
         title: 'Hodlpay',
         link: 'https://hodlpay.io',
@@ -18,7 +27,7 @@ export const projects = [
         link: 'https://dijievents.com',
         img: 'https://joshod.netlify.app/static/media/diji.0e390e816609adac9e44.png',
         skills: ['Vue', 'Pinia', 'Javascript'],
-        description: 'An Edutech platform where students share ideas and leanring resorces'
+        description: 'An Edutech platform where students share ideas and learning resources'
     },
     {
         title: 'UHAS SHNP',
